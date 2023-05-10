@@ -42,7 +42,7 @@ export default {
 
          <div class="header-right">
             <a class="active" href="../../service.html">Наші послуги</a>
-            <a class="fa fa-fw fa-envelope" href="#contact">Контакт</a>
+            <a class="fa fa-fw fa-envelope" href="../../contact.html">Контакт</a>
             <a href="../../documents.html">Документи</a>
             <a class="language" href="#language">UA/ES</a>
          </div>
@@ -106,6 +106,7 @@ header{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 2;
+    font-size: 5vh;
 }
 .bg-text h2{
     text-align: center;

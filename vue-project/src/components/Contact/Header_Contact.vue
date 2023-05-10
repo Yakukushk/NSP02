@@ -1,4 +1,3 @@
-
 <script>
 // import {ref} from "vue";
 import image from "../../components/img/323344.png";
@@ -28,10 +27,11 @@ export default {
 
 </script>
 
+
 <template>
   <!-- Image and text -->
-    <div class="bg-img-2 bg-primary opacity-90">
-        <div class="dark-overlay-1"></div>
+    <div class="bg-img-3 bg-primary opacity-90">
+        <div class="dark-overlay-2"></div>
         <div class="header">
 
             <nav class="navbar">
@@ -52,8 +52,8 @@ export default {
 
 
         </div>
-        <div class="bg-text-1 pt-3">
-            <h1>Наші Послуги</h1>
+        <div class="bg-text-2 pt-3">
+            <h1>Контакт</h1>
 
 
         </div>
@@ -68,8 +68,15 @@ export default {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+
+
+
 }
-.dark-overlay-1 {
+
+
+
+
+.dark-overlay-2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -79,18 +86,19 @@ body {
     opacity: 0.7;
 }
 
-.bg-img-2{
-    background-image: url("../../components/img/fahnen-ukraine-eu-101.jpg");
+.bg-img-3{
+    background-image: url("../../components/img/j1g26le08m3c8fks.jpg");
     background-size: cover;
     display: block;
     position: relative;
     min-width: 55vh;
     min-height: 55vh;
+    background-position: center center;
     background-repeat: no-repeat;
 
 
 }
-.bg-text-1 h1{
+.bg-text-2 h1{
     text-align: center;
     margin-top: 10px;
     color: white;
@@ -99,9 +107,22 @@ body {
     z-index: 2;
     font-size: 13vh;
 }
-
-
-
+.bg-text h2{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+.bg-text h4{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding-top: 30px;
+    position: relative;
+    z-index: 2;
+}
 
 
 
@@ -124,7 +145,7 @@ body {
 
 
 .header a.active {
-
+    /*background-color: dodgerblue;*/
     color: white;
 }
 
