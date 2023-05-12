@@ -38,10 +38,10 @@ export default {
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="#!" class="text-white">example1@hotmail.com</a>
+                            <a href="mailto:example2@hotmail.com?subject=Повідомлення&body=Доброго дня!" class="text-white">example1@hotmail.com</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">example2@hotmail.com</a>
+                            <a href="mailto:example2@hotmail.com?subject=Повідомлення&body=Доброго дня!" class="text-white">example2@hotmail.com</a>
                         </li>
 
                     </ul>

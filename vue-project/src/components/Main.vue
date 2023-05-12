@@ -52,8 +52,8 @@ export default {
                     </ul>
                 </div>
             </div>
-            <hr class="mt-3">
-            <div class="row mx-3 pt-2">
+            <hr class="mt-5">
+            <div class="row mx-3 pt-2 mt-2">
                 <div class="col-4 ml-auto mr-auto border-right">
                 <div class="card-body pt-2">
                     <h5 class="card-title font-weight-bold"><b>ВИГІДНІ ЦІНИ</b> </h5>
@@ -65,7 +65,7 @@ export default {
                 </div>
 
 
-                    <div class="col-4 border-right">
+                    <div class="col-4  border-right">
                         <div class="card-body">
                             <h5 class="card-title font-weight-bold"><b>ОПЕРАТИВНИЙ СЕРВІС</b> </h5>
                             <p class="card-text pt-2 font-weight-light">
@@ -110,6 +110,7 @@ export default {
 }
 body {
     font-family: "Calibri";
+    display: block;
 }
 .card-img{
     padding-left: 50px;
