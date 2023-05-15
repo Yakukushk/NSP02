@@ -42,8 +42,8 @@ export default {
 
          <div class="header-right">
             <a class="active" href="../../service.html">Наші послуги</a>
-            <a class="fa fa-fw fa-envelope" href="../../contact.html">Контакт</a>
-            <a href="../../documents.html">Документи</a>
+            <a class="contact" href="../../contact.html">Контакт</a>
+            <a class="document" href="../../documents.html">Документи</a>
             <a class="language" href="#language">UA/ES</a>
          </div>
 
@@ -124,17 +124,7 @@ header{
     position: relative;
     z-index: 2;
 }
-.header {
-    /*overflow: hidden;*/
-    /*background-image: linear-gradient(to bottom right,#f2f2f2,#dddddd,#ffffff);*/
-    /*padding: 5px 5px;*/
-    /*!*content: '';*!*/
-    /*!*position: absolute;*!*/
-    /*top: 0;*/
-    /*right: 0;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-}
+
 
 
 

@@ -36,10 +36,10 @@ export default {
                 </a>
 
                 <div class="header-right">
-                    <a class="active" href="../../../service.html">Наші послуги</a>
+                    <a class="fa fa-fw fa-envelope active" href="../../../service.html">Наші послуги</a>
                     <a class="fa fa-fw fa-envelope" href="../../../contact.html">Контакт</a>
-                    <a href="../../../documents.html">Документи</a>
-                    <a class="language" href="#language">UA/ES</a>
+                    <a class="fa fa-fw fa-envelope" href="../../../documents.html">Документи</a>
+                    <a class="fa fa-fw fa-envelope language" href="#language">UA/ES</a>
                 </div>
 
             </nav>

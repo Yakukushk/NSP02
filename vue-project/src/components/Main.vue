@@ -20,22 +20,21 @@ export default {
 
 <template>
     <main>
+        <div class="container overflow-x-auto">
         <div class="row">
             <div class="card-1 col">
                 <div class="card-img">
-                    <img :src="images[0]" alt="" class="w-50 h-50 mt-5">
+                    <img :src="images[0]" alt="" class="mt-5" style="height: 70%; width: 70%">
                 </div>
                 <div class="card-1-txt">
                     <h6>ВИТЯГ про несудимість (видається замість довідки)</h6>
-                    <div class="card-1-button">
-                        <button class="btn info">Дізнатися Ціни</button>
-                    </div>
+
                 </div>
             </div>
             <div class="col pt-3">
                 <div class="card-body pt-2">
                     <h5 class="card-title font-weight-bold"><b>БЮРО ЛЕГАЛІЗАЦІЇ ДОКУМЕНТІВ</b> </h5>
-<!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+
                     <p class="card-text pt-2 font-weight-light">Ми надаємо послуги з отримання копій та дублікатів документів (довідка про відсутність судимості,
                         свідоцтво про народження, свідоцтво про укладення шлюбу, свідоцтво про розірвання шлюбу (розлучення),
                         свідоцтво про смерть, свідоцтво про зміну прізвища, рішення суду та інше.) нового державного зразка України з усіх областей,
@@ -52,8 +51,9 @@ export default {
                     </ul>
                 </div>
             </div>
-            <hr class="mt-5">
-            <div class="row mx-3 pt-2 mt-2">
+            <hr class="mt-4">
+
+            <div class="row mx-3 pt-2 mt-2 w-auto h-auto ">
                 <div class="col-4 ml-auto mr-auto border-right">
                 <div class="card-body pt-2">
                     <h5 class="card-title font-weight-bold"><b>ВИГІДНІ ЦІНИ</b> </h5>
@@ -88,7 +88,7 @@ export default {
                     </div>
 
                 </div>
-
+            </div>
 
 
             </div>

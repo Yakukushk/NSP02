@@ -16,6 +16,9 @@ export default {
 </script>
 
 <template>
+
+        <!-- Ваше содержимое -->
+
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Форма заповнення</button>
@@ -30,6 +33,7 @@ export default {
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
             <div class="row">
                 <div class="col">
                     <div class="wrapper mt-4">
@@ -77,7 +81,8 @@ export default {
             </div>
         </div>
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-            <div class="row mt-4 mb-2" style="text-align: center;" >
+
+            <div class="row w-auto h-auto mt-4 mb-2" style="text-align: center;" >
                 <div class="col-12">
                     <iframe :src="mapUrl"  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
