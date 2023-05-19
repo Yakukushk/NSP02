@@ -4,6 +4,7 @@
 import image from "../../components/img/323344.png";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import {ref} from "vue";
 const nameofCompany = "Name Company";
 
 function Show_Image(image){
@@ -19,9 +20,18 @@ export default {
 
             selectIndexImage: 0,
             nameofCompany: nameofCompany,
+            currentLanguage: ref('UA')
+
 
         }
+    },
+methods : {
+    changeLanguage() {
+        this.currentLanguage = this.currentLanguage === 'UA' ? 'ES' : 'UA';
+        this.$i18n.locale = this.currentLanguage;
+
     }
+}
 
 }
 
@@ -37,15 +47,16 @@ export default {
             <nav class="navbar">
                 <a class="navbar-brand" href="../../../index.html">
                     <img :src="image" width="40" height="40" class="d-inline-block align-top mx-2 " alt="">
-                    Name Company
+                    {{ $t('NameofCompany')}}
                 </a>
 
                 <div class="header-right">
-                    <a class="active" href="../../../service.html">Наші послуги</a>
-                    <a class="fa fa-fw fa-envelope" href="../../../contact.html">Контакт</a>
-                    <a href="../../../documents.html">Документи</a>
-                    <a class="language" href="#language">UA/ES</a>
+                    <a class="nav-link active" href="../../service.html">{{ $t('OurService')}}</a>
+                    <a class="nav-link" href="../../contact.html">{{ $t('Contact')}}</a>
+                    <a class="nav-link" href="../../documents.html">{{ $t('Document')}}</a>
+                    <a class="nav-link" href="#" @click="changeLanguage">{{ currentLanguage }}</a>
                 </div>
+
 
             </nav>
 
@@ -53,7 +64,7 @@ export default {
 
         </div>
         <div class="bg-text-1 pt-3">
-            <h1>Наші Послуги</h1>
+            <h1>{{$t('LegalTranslateH1')}}</h1>
 
 
         </div>

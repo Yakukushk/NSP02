@@ -4,6 +4,8 @@
 import image from "./img/323344.png";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import { ref } from 'vue';
+
 const nameofCompany = "Name Company";
 
 function Show_Image(image){
@@ -13,15 +15,24 @@ function Show_Image(image){
 }
 
 export default {
+
    data: function () {
       return {
          image: image,
 
          selectIndexImage: 0,
          nameofCompany: nameofCompany,
+          currentLanguage: ref('UA')
 
       }
-   }
+   },
+    methods : {
+        changeLanguage() {
+            this.currentLanguage = this.currentLanguage === 'UA' ? 'ES' : 'UA';
+            this.$i18n.locale = this.currentLanguage;
+
+        }
+    }
 
 }
 
@@ -35,16 +46,16 @@ export default {
     <div class="header">
 
       <nav class="navbar">
-         <a class="navbar-brand" href="#">
+         <a class="navbar-brand active" href="#">
             <img :src="image" width="40" height="40" class="d-inline-block align-top mx-2 " alt="">
-               Name Company
+             {{ $t('NameofCompany')}}
          </a>
 
          <div class="header-right">
-            <a class="active" href="../../service.html">Наші послуги</a>
-            <a class="contact" href="../../contact.html">Контакт</a>
-            <a class="document" href="../../documents.html">Документи</a>
-            <a class="language" href="#language">UA/ES</a>
+            <a class="nav-link" href="../../service.html">{{ $t('OurService')}}</a>
+            <a class="nav-link" href="../../contact.html">{{ $t('Contact')}}</a>
+            <a class="nav-link" href="../../documents.html">{{ $t('Document')}}</a>
+             <a class="nav-link" href="#" @click="changeLanguage">{{ currentLanguage }}</a>
          </div>
 
       </nav>
@@ -53,9 +64,9 @@ export default {
 
     </div>
     <div class="bg-text pt-3">
-        <h1>ПЕРЕКЛАДИ ТА ЛЕГАЛІЗАЦІЯ</h1>
-        <h2>ЛЕГАЛІЗАЦІЯ ДОКУМЕНТІВ ДЛЯ КОНСУЛЬСТВА ІСПАНІЇ ТА КРАЇН ШЕНГЕНСЬКОЇ ЗОНИ</h2>
-        <h4>Документи, апостиль, переклад для громадян України</h4>
+        <h1>{{ $t('LegalTranslateH1')}}</h1>
+        <h2>{{ $t('LegalTranslateH2')}}</h2>
+        <h4>{{ $t('LegalTranslateH4')}}</h4>
     </div>
 
 </div>

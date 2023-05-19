@@ -21,7 +21,7 @@ export default {
             <div className="row">
                 <!--Grid column-->
                 <div className="col-lg-3 col-md-12 mb-4 mb-md-0">
-                    <h5 className="text-uppercase">ПЕРЕКЛАДИ ТА ЛЕГАЛІЗАЦІЯ</h5>
+                    <h5 className="text-uppercase">{{$t('FooterText')}}</h5>
 
                     <p>
                         Знаходимо особистий підхід до кожного клієнта і гарантуємо якісний результат,

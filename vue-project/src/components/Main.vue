@@ -27,27 +27,23 @@ export default {
                     <img :src="images[0]" alt="" class="mt-5" style="height: 70%; width: 70%">
                 </div>
                 <div class="card-1-txt">
-                    <h6>ВИТЯГ про несудимість (видається замість довідки)</h6>
+                    <h6>{{ $t('TextFromImage')}}</h6>
 
                 </div>
             </div>
             <div class="col pt-3">
                 <div class="card-body pt-2">
-                    <h5 class="card-title font-weight-bold"><b>БЮРО ЛЕГАЛІЗАЦІЇ ДОКУМЕНТІВ</b> </h5>
+                    <h5 class="card-title font-weight-bold"><b>{{ $t('MainDocH1')}}</b> </h5>
 
-                    <p class="card-text pt-2 font-weight-light">Ми надаємо послуги з отримання копій та дублікатів документів (довідка про відсутність судимості,
-                        свідоцтво про народження, свідоцтво про укладення шлюбу, свідоцтво про розірвання шлюбу (розлучення),
-                        свідоцтво про смерть, свідоцтво про зміну прізвища, рішення суду та інше.) нового державного зразка України з усіх областей,
-                        включаючи Донецьку та Луганську області, а також Республіку Крим.
+                    <p class="card-text pt-2 font-weight-light">{{ $t('MainDocP')}}
                     </p>
                     <p class="card-text pt-2 font-weight-light">
-                        <b>Важливо</b>: можливе отримання копій та дублікатів тільки існуючих документів з відповідними підписами,
-                        апостилями і гербовими печатками державних установ або структур України, зокрема:
+                       <strong>{{ $t('MainDocAttention')}}</strong>
                     </p>
                     <ul class="list-service">
-                    <li><a href="https://mvs.gov.ua/" class="card-link">МВС України</a></li>
-                    <li><a href="https://minjust.gov.ua/" class="card-link">Міністерство юстиції України</a></li>
-                    <li><a href="https://mon.gov.ua/ua" class="card-link">Міністерство освіти України</a></li>
+                    <li><a href="https://mvs.gov.ua/" class="card-link">{{ $t('MainLink1')}}</a></li>
+                    <li><a href="https://minjust.gov.ua/" class="card-link">{{ $t('MainLink2')}}</a></li>
+                    <li><a href="https://mon.gov.ua/ua" class="card-link">{{ $t('MainLink3')}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -56,10 +52,9 @@ export default {
             <div class="row mx-3 pt-2 mt-2 w-auto h-auto ">
                 <div class="col-4 ml-auto mr-auto border-right">
                 <div class="card-body pt-2">
-                    <h5 class="card-title font-weight-bold"><b>ВИГІДНІ ЦІНИ</b> </h5>
+                    <h5 class="card-title font-weight-bold"><b>{{ $t('MainCardTitle1')}}</b> </h5>
                     <p class="card-text pt-2 font-weight-light">
-                        Ціни на наші послуги ви можете знайти на сторінках сайту при виборі потрібної Вам послуги.<br>
-                        Ми гарантуємо відповідність ціни і якості. В нас немає жодних додаткових або прихованих платежів.
+                        {{ $t('MainCardText1')}}
                     </p>
                 </div>
                 </div>
@@ -67,23 +62,17 @@ export default {
 
                     <div class="col-4  border-right">
                         <div class="card-body">
-                            <h5 class="card-title font-weight-bold"><b>ОПЕРАТИВНИЙ СЕРВІС</b> </h5>
+                            <h5 class="card-title font-weight-bold"><b>{{ $t('MainCardTitle2')}}</b> </h5>
                             <p class="card-text pt-2 font-weight-light">
-                                При замовленні послуг у нас, Ви можете бути впевнені, що отримаєте документи в найкоротші терміни.
-                                Ми завжди гарантуємо швидкість і якість послуг, що надаються.
-                                Якщо довідка про несудимість або свідоцтво про укладення шлюбу необхідна
-                                Вам терміново, ми виконаємо це замовлення терміном до 15 робочих днів..
+                                {{ $t('MainCardText2')}}
                             </p>
                         </div>
                     </div>
                 <div class="col-4">
                     <div class="card-body">
-                        <h5 class="card-title font-weight-bold"><b>ВИСОКА ЯКІСТЬ ПОСЛУГ</b> </h5>
+                        <h5 class="card-title font-weight-bold"><b>{{ $t('MainCardTitle3')}}</b> </h5>
                         <p class="card-text pt-2 font-weight-light">
-                            Ви можете бути впевнені, що не переплачуєте за надані послуги і отримуєте тільки те, що Вам необхідно.
-                            Ми надаємо широкий спектр послуг: від отримання копії свідоцтва
-                            РАГС та апостiлювання довiдок про вiдсутнiсть судимостi до проставлення апостиля та перекладу
-                            різноманітних документів: диплом, додаток до диплому, трудова, та iншi документи.
+                            {{ $t('MainCardText3')}}
                         </p>
                     </div>
 
@@ -96,7 +85,7 @@ export default {
 
         </div>
         <div class="finish-text mt-5">
-            <h3><b>МАЮЧИ ВЕЛИКИЙ ДОСВІД З ОФОРМЛЕННЯ ДОКУМЕНТІВ, МИ ЗЕКОНОМИМО ВАШ ЧАС І ГРОШІ!</b></h3>
+            <h3><b>{{ $t('MainFinishText')}}</b></h3>
         </div>
 
 

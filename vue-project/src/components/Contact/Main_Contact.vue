@@ -9,9 +9,18 @@ export default {
             name: "Ім'я",
             surname: "Прізвище",
             message: "Повідомлення",
-            mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.676881500795!2d30.521242712029444!3d50.46574138614433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce3f6e0df7ef%3A0xf57a41c6bf30acb0!2z0YPQuy4g0JjQu9GM0LjQvdGB0LrQsNGPLCAyMCwg0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2spl!4v1683893853478!5m2!1sru!2spl"
+            mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.676881500795!2d30.521242712029444!3d50.46574138614433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce3f6e0df7ef%3A0xf57a41c6bf30acb0!2z0YPQuy4g0JjQu9GM0LjQvdGB0LrQsNGPLCAyMCwg0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2spl!4v1683893853478!5m2!1sru!2spl",
+            phoneNumber: '',
+            InvalidPhoneNumber: false,
+
         }
-   }
+   },
+    methods :{
+        validatePhoneNumber(){
+           const dig = this.phoneNumber.replace(/\D/g, '');
+           this.InvalidPhoneNumber = dig.length !== 10;
+        }
+    }
 }
 </script>
 
@@ -53,9 +62,11 @@ export default {
                                         <input type="text" id="surname" name="surname" required>
                                     </div>
                                     <div class="form-fields">
-                                        <label for="number">Ваш телефон</label>
-                                        <input type="number" id="number" name="number" max="10" required>
+                                        <label for="phone">Ваш телефон</label>
+                                        <input v-model="phoneNumber" @input="validatePhoneNumber" placeholder="">
+                                        <span v-if="invalidPhoneNumber" style="color: red;">Phone number must be 10 digits</span>
                                     </div>
+
 
                                     <div class="form-fields">
                                         <label for="email">{{email}}</label>
