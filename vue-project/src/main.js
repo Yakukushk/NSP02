@@ -61,17 +61,7 @@ const i18n = createI18n({
             AText: '© 2023 Todos los derechos reservados:',
             //
             documentTitle: 'Título del documento',
-            description: 'Descripción',
-            importantNote: 'Nota importante',
-            prices: 'Precios',
-            quickService: 'Servicio rápido',
-            highQuality: 'Alta calidad',
-            greatExperience: 'Gran experiencia',
-            saveTimeAndMoney: '¡Ahorre tiempo y dinero!',
-            obtainCopiesAndDuplicates: 'Obtenga copias y duplicados de documentos',
-            mvsLink: 'Enlace al Ministerio del Interior de Ucrania',
-            justiceLink: 'Enlace al Ministerio de Justicia de Ucrania',
-            educationLink: 'Enlace al Ministerio de Educación de Ucrania'
+
         },
         UA: {
             // Header
@@ -115,18 +105,7 @@ const i18n = createI18n({
             Phone: 'Номера Телефонів',
             AText: '© 2023 Всі права захищені:',
             //
-            documentTitle: 'Документи',
-            description: '',
-            importantNote: '',
-            prices: '',
-            quickService: '',
-            highQuality: '',
-            greatExperience: '',
-            saveTimeAndMoney: '',
-            obtainCopiesAndDuplicates: '',
-            mvsLink: '',
-            justiceLink: '',
-            educationLink: ''
+
         }
     }
 });

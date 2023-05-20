@@ -157,12 +157,11 @@ header{
 }
 
 .header a:hover {
-   /*background-color: #cbcbb4;*/
-   /*color: black;*/
+
 }
 
 .header a.active {
-   /*background-color: dodgerblue;*/
+
    color: white;
 }
 
@@ -182,9 +181,7 @@ header{
       float: none;
    }
 }
-.language{
-   font-style: italic;
-}
+
 
 
 

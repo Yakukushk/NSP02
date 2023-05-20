@@ -30,13 +30,13 @@ export default {
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Форма заповнення</button>
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">{{$t('Tabs1')}}</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Мапа</button>
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">{{$t('Tabs2')}}</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Контакт</button>
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">{{$t('Tabs3')}}</button>
         </li>
 
     </ul>
@@ -49,32 +49,32 @@ export default {
                         <div class="container">
                             <div class="card-body">
                                 <div class="txt-form">
-                                    <h1><strong>{{title}}</strong></h1>
+                                    <h1><strong>{{$t('FormTitle')}}</strong></h1>
                                 </div>
                                 <form target="_blank" action="https://formsubmit.co/example.23A@outlook.com" method="POST" >
 
                                     <div class="form-fields">
-                                        <label for="name">{{name}}</label>
+                                        <label for="name">{{$t('Name')}}</label>
                                         <input type="text" id="name" name="name" required>
                                     </div>
                                     <div class="form-fields">
-                                        <label for="surname">{{surname}}</label>
+                                        <label for="surname">{{$t('Surname')}}</label>
                                         <input type="text" id="surname" name="surname" required>
                                     </div>
                                     <div class="form-fields">
-                                        <label for="phone">Ваш телефон</label>
+                                        <label for="phone">{{ $t('Phones') }}</label>
                                         <input v-model="phoneNumber" @input="validatePhoneNumber" placeholder="">
                                         <span v-if="invalidPhoneNumber" style="color: red;">Phone number must be 10 digits</span>
                                     </div>
 
 
                                     <div class="form-fields">
-                                        <label for="email">{{email}}</label>
+                                        <label for="email">{{$t('Email')}}</label>
                                         <input type="email" id="email" name="email" required>
                                     </div>
 
                                     <div class="form-fields">
-                                        <label for="message">{{message}}</label>
+                                        <label for="message">{{$t('Message')}}</label>
                                         <textarea id="message" name="message" required></textarea>
                                     </div>
 
@@ -104,7 +104,7 @@ export default {
         </div>
         <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
             <div class="col" style="text-align: center;">
-                <h5 class="text-uppercase mb-0">Номера Телефонів</h5>
+                <h5 class="text-uppercase mb-0">{{$t('Phone')}}</h5>
 
                 <ul class="list-unstyled mt-2">
                     <li>
@@ -172,7 +172,7 @@ input[type="text"], input[type="email"], textarea, input[type="message"], input[
     border-radius: 4px;
     text-shadow: #282828;
 }
-body { display: block }
+body { display: block; overflow-x: hidden; }
 button[type="submit"] {
     background: rgb(6,14,131);
     background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);

@@ -62,47 +62,47 @@ export default {
     <div class="row m-auto w-auto">
         <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-doc_1-list" data-bs-toggle="list" href="#list-doc_1" role="tab" aria-controls="list-home" @click="selectDoc">Витяг</a>
-                <a class="list-group-item list-group-item-action" id="list-doc_2-list" data-bs-toggle="list" href="#list-doc_2" role="tab" aria-controls="list-profile" @click="selectDoc" >Довідка про відсутність судимості</a>
-                <a class="list-group-item list-group-item-action" id="list-doc_3-list" data-bs-toggle="list" href="#list-doc_3" role="tab" aria-controls="list-messages" @click="selectDoc">Свідоцтво про </a>
-                <a class="list-group-item list-group-item-action" id="list-doc_4-list" data-bs-toggle="list" href="#list-doc_4" role="tab" aria-controls="list-settings" @click="selectDoc">Додатковi документи:</a>
+                <a class="list-group-item list-group-item-action active" id="list-doc_1-list" data-bs-toggle="list" href="#list-doc_1" role="tab" aria-controls="list-home" @click="selectDoc">{{$t('DocTitle1')}}</a>
+                <a class="list-group-item list-group-item-action" id="list-doc_2-list" data-bs-toggle="list" href="#list-doc_2" role="tab" aria-controls="list-profile" @click="selectDoc" >{{$t('DocTitle2')}}</a>
+                <a class="list-group-item list-group-item-action" id="list-doc_3-list" data-bs-toggle="list" href="#list-doc_3" role="tab" aria-controls="list-messages" @click="selectDoc">{{$t('DocTitle3')}} </a>
+                <a class="list-group-item list-group-item-action" id="list-doc_4-list" data-bs-toggle="list" href="#list-doc_4" role="tab" aria-controls="list-settings" @click="selectDoc">{{$t('DocTitle4')}}</a>
             </div>
         </div>
         <div class="col-8">
             <div class="tab-content" id="nav-tabContent" >
                 <div class="tab-pane fade show active" id="list-doc_1" role="tabpanel" aria-labelledby="list-doc_1-list" v-for="n_doc of docs_1" >
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><b>Назва</b> - {{n_doc.name}}</li>
+                        <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle1')}}</li>
                         <li class="list-group-item"><img :src="n_doc.image" alt="" style="width: 50%; height: 50%"></li>
-                        <li class="list-group-item"><b>Опис</b> - {{n_doc.describe}}</li>
-                        <li class="list-group-item"><b>Інформація</b> - {{n_doc.info}}</li>
+                        <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe')}}</li>
+                        <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo')}}</li>
                     </ul>
                 </div>
                 <div class="tab-pane fade" id="list-doc_2" role="tabpanel" aria-labelledby="list-doc_2-list" v-for="n_doc of docs_2" >
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><b>Назва</b> - {{n_doc.name}}</li>
+                        <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle2')}}</li>
                         <li class="list-group-item"><img :src="n_doc.image" alt="" style="width: 50%; height: 50%"></li>
-                        <li class="list-group-item"><b>Опис</b> - {{n_doc.describe}}</li>
-                        <li class="list-group-item"><b>Інформація</b> - {{n_doc.info}}</li>
+                        <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe2')}}</li>
+                        <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo2')}}</li>
                     </ul>
                 </div>
                 <div class="tab-pane fade" id="list-doc_3" role="tabpanel" aria-labelledby="list-doc_3-list" v-for="n_doc of docs_3">
                     <ul class="list-group list-group-flush">
 
                         <li class="list-group-item mt-2"><img :src="n_doc.image" alt=""></li>
-                        <li class="list-group-item mt-4"><strong>{{n_doc.describe_1}}</strong></li>
-                        <li class="list-group-item mt-4"><strong>{{n_doc.describe_2}}</strong></li>
-                        <li class="list-group-item mt-4"><strong>{{n_doc.describe_3}}</strong></li>
-                        <li class="list-group-item mt-4"><strong>{{n_doc.describe_4}}</strong></li>
+                        <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC1')}}</strong></li>
+                        <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC2')}}</strong></li>
+                        <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC3')}}</strong></li>
+                        <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC4')}}</strong></li>
                     </ul>
                 </div>
                 <div class="tab-pane fade" id="list-doc_4" role="tabpanel" aria-labelledby="list-doc_4-list">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Витяг з державного реєстру про зміну прізвища</li>
-                        <li class="list-group-item">Виписка з державного реєстру про наявність / відсутність нерухомості</li>
-                        <li class="list-group-item">Копії рішень судів України</li>
-                        <li class="list-group-item">Витяг з державного реєстру про зміну прізвища</li>
-                        <li class="list-group-item">Подаємо запити на підприємства для підтвердження стажу</li>
+                        <li class="list-group-item">{{$t('DocDescribeD1')}}</li>
+                        <li class="list-group-item">{{$t('DocDescribeD2')}}</li>
+                        <li class="list-group-item">{{$t('DocDescribeD3')}}</li>
+                        <li class="list-group-item">{{$t('DocDescribeD4')}}</li>
+                        <li class="list-group-item">{{$t('DocDescribeD5')}}</li>
                     </ul>
 
                 </div>
