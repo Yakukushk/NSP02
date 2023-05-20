@@ -8,6 +8,7 @@
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist"
   }
+
 ,
   "dependencies": {
     "@innologica/vue-dropdown-menu": "^0.1.4",
