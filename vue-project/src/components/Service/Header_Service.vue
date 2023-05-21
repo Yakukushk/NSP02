@@ -48,8 +48,7 @@ methods : {
                 <a class="navbar-brand" href="../../../index.html">
                     <img :src="image" width="40" height="40" class="d-inline-block align-top mx-2 " alt="">
                     {{ $t('NameofCompany')}}
-                </a>
-
+                </a>git 
                 <div class="header-right">
                     <a class="nav-link active" href="../../service.html">{{ $t('OurService')}}</a>
                     <a class="nav-link" href="../../contact.html">{{ $t('Contact')}}</a>

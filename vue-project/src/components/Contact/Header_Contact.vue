@@ -44,14 +44,14 @@ export default {
         <div class="header">
 
             <nav class="navbar">
-                <a class="navbar-brand active" href="../../../index.html">
+                <a class="navbar-brand" href="../../../index.html">
                     <img :src="image" width="40" height="40" class="d-inline-block align-top mx-2 " alt="">
                     {{ $t('NameofCompany')}}
                 </a>
 
                 <div class="header-right">
                     <a class="nav-link" href="../../service.html">{{ $t('OurService')}}</a>
-                    <a class="nav-link" href="../../contact.html">{{ $t('Contact')}}</a>
+                    <a class="nav-link active" href="../../contact.html">{{ $t('Contact')}}</a>
                     <a class="nav-link" href="../../documents.html">{{ $t('Document')}}</a>
                     <a class="nav-link" href="#" @click="changeLanguage">{{ currentLanguage }}</a>
                 </div>
