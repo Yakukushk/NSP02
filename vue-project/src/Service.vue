@@ -1,7 +1,7 @@
 <script>
-import Header_Service from "@/components/Service/Header_Service.vue";
-import Main_Service from "@/components/Service/Main_Service.vue";
-import Footer_Service from "@/components/Service/Footer_Service.vue";
+import Header_Service from "@/components/Header_Service.vue";
+import Main_Service from "@/components/Main_Service.vue";
+import Footer_Service from "@/components/Footer_Service.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {

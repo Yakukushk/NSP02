@@ -1,14 +1,14 @@
 import Footer from "@/components/Footer.vue";
 import Header from "@/components/Header.vue";
 import Main from "@/components/Main.vue";
-import Header_Service from "@/components/Service/Header_Service.vue";
-import Main_Service from "@/components/Service/Main_Service.vue";
-import Footer_Service from "@/components/Service/Footer_Service.vue";
-import Header_Contact from "@/components/Contact/Header_Contact.vue";
-import Main_Contact from "@/components/Contact/Main_Contact.vue";
-import Footer_Contact from "@/components/Contact/Footer_Contact.vue";
-import Header_Doc from "@/components/Documents/Header_Doc.vue";
-import Main_Doc from "@/components/Documents/Main_Doc.vue";
+import Header_Service from "@/components/Header_Service.vue";
+import Main_Service from "@/components/Main_Service.vue";
+import Footer_Service from "@/components/Footer_Service.vue";
+import Header_Contact from "@/components/Header_Contact.vue";
+import Main_Contact from "@/components/Main_Contact.vue";
+import Footer_Contact from "@/components/Footer_Contact.vue";
+import Header_Doc from "@/components/Header_Doc.vue";
+import Main_Doc from "@/components/Main_Doc.vue";
 
 
 

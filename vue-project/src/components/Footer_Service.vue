@@ -72,7 +72,7 @@ export default {
         <!-- Copyright -->
         <div className="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2023 Всі права захищені:
-            <a className="text-white" href="../../../index.html">Бюро перекладів</a>
+            <a className="text-white" href="../../index.html">Бюро перекладів</a>
         </div>
         <!-- Copyright -->
     </footer>

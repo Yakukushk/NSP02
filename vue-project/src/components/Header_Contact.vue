@@ -1,13 +1,14 @@
 <script>
-import image from "../../components/img/323344.png";
+// import {ref} from "vue";
+import image from "./img/323344.png";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import { ref } from 'vue';
+import {ref} from "vue";
 const nameofCompany = "Name Company";
 
 function Show_Image(image){
     return {
-        image
+        image,
     }
 }
 
@@ -18,36 +19,40 @@ export default {
 
             selectIndexImage: 0,
             nameofCompany: nameofCompany,
-            currentLanguage: ref('UA'),
+            currentLanguage: ref('UA')
 
         }
     },
-    methods: {
-        changeLanguage(){
-          this.currentLanguage = this.currentLanguage === 'UA' ? 'ES' : 'UA';
-          this.$i18n.locale = this.currentLanguage;S
+    methods : {
+        changeLanguage() {
+            this.currentLanguage = this.currentLanguage === 'UA' ? 'ES' : 'UA';
+            this.$i18n.locale = this.currentLanguage;
 
-        },
+        }
     }
 
 }
+
+
 </script>
 
+
 <template>
-    <div class="bg-img-4 bg-primary opacity-90">
+  <!-- Image and text -->
+    <div class="bg-img-3 bg-primary opacity-90">
         <div class="dark-overlay-2"></div>
         <div class="header">
 
             <nav class="navbar">
-                <a class="navbar-brand active" href="../../../index.html">
+                <a class="navbar-brand" href="../../index.html">
                     <img :src="image" width="40" height="40" class="d-inline-block align-top mx-2 " alt="">
                     {{ $t('NameofCompany')}}
                 </a>
 
                 <div class="header-right">
                     <a class="nav-link" href="../../service.html">{{ $t('OurService')}}</a>
-                    <a class="nav-link" href="../../contact.html">{{ $t('Contact')}}</a>
-                    <a class="nav-link active" href="../../documents.html">{{ $t('Document')}}</a>
+                    <a class="nav-link active" href="../../contact.html">{{ $t('Contact')}}</a>
+                    <a class="nav-link" href="../../documents.html">{{ $t('Document')}}</a>
                     <a class="nav-link" href="#" @click="changeLanguage">{{ currentLanguage }}</a>
                 </div>
 
@@ -56,8 +61,8 @@ export default {
 
 
         </div>
-        <div class="bg-text-3 pt-3">
-            <h1>{{ $t('Document')}}</h1>
+        <div class="bg-text-2 pt-3">
+            <h1>{{ $t('Contact')}}</h1>
 
 
         </div>
@@ -66,9 +71,7 @@ export default {
 
 </template>
 
-
-
-<style>
+<style >
 * {box-sizing: border-box;}
 
 body {
@@ -92,19 +95,19 @@ body {
     opacity: 0.7;
 }
 
-.bg-img-4{
-    background-image: url("../../components/img/30058-foreign_exchange_market-communication-business-business_development-service-1920x1080.jpg");
+.bg-img-3{
+    background-image: url("img/j1g26le08m3c8fks.jpg");
     background-size: cover;
     display: block;
     position: relative;
     min-width: 55vh;
     min-height: 55vh;
-    /*background-position: center center;*/
+    background-position: center center;
     background-repeat: no-repeat;
 
 
 }
-.bg-text-3 h1{
+.bg-text-2 h1{
     text-align: center;
     margin-top: 10px;
     color: white;
@@ -174,4 +177,7 @@ body {
 .language{
     font-style: italic;
 }
+
+
+
 </style>
