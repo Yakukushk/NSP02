@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run copy-files && vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && vercel --prod"
-  },
+    "deploy": "npm run build && vercel --prod",
+    "copy-files": "copy \"service.html\" \"dist\" && copy \"contact.html\" \"dist\" && copy \"document.html\" \"dist\""
+  }
+,
   "dependencies": {
     "@innologica/vue-dropdown-menu": "^0.1.4",
     "boostrap": "^2.0.0",
