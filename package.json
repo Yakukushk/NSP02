@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "connect-history-api-fallback": "^2.0.0"
+  },
+  "scripts": {
+    "build": "vue-cli-service build && node server.js"
+  }
+
+}

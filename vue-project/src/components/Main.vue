@@ -1,14 +1,14 @@
 
 
 <script>
-import image from './img/Дизайн без назви (12).png'
+
 
 export default {
     data() {
         return {
 
             images: [
-                './src/components/img/Дизайн без назви (12).png',
+                './src/components/img/dd.png',
                 './src/components/img/rozirvannya-shlyubu-06.jpg',
                 './src/components/img/0bb0flkn9zvgvg9v.jpg'
             ]
@@ -24,7 +24,7 @@ export default {
         <div class="row">
             <div class="card-1 col">
                 <div class="card-img">
-                    <img :src="images[0]" alt="" class="mt-5" style="height: 70%; width: 70%">
+                    <img src="./img/dd.png" alt="" class="mt-5" style="height: 70%; width: 70%">
                 </div>
                 <div class="card-1-txt">
                     <h6>{{ $t('TextFromImage')}}</h6>
