@@ -7,7 +7,7 @@
     "build": "npm run copy-files && vite build",
     "preview": "vite preview",
     "deploy": "npm run build && vercel --prod",
-    "copy-files": "copy \"service.html\" \"dist\" && copy \"contact.html\" \"dist\" && copy \"document.html\" \"dist\""
+    "copy-files": "node copy-files.js"
   }
 ,
   "dependencies": {
@@ -15,6 +15,7 @@
     "boostrap": "^2.0.0",
     "bootstrap": "^5.2.3",
     "bootstrap-vue": "^2.23.1",
+    "fs-extra": "^11.1.1",
     "leaflet": "^1.9.3",
     "v-footer": "^1.0.0",
     "vue": "^3.3.2",
