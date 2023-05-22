@@ -6,10 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && vercel --prod"
-  }
-
-,
+    "deploy": "npm run build && vercel --prod"
+  },
   "dependencies": {
     "@innologica/vue-dropdown-menu": "^0.1.4",
     "boostrap": "^2.0.0",
@@ -28,6 +26,7 @@
     "@nuxtjs/vuetify": "^1.12.3",
     "@vitejs/plugin-vue": "^4.0.0",
     "gh-pages": "^5.0.0",
+    "rollup-plugin-copy": "^3.4.0",
     "vite": "^4.1.4"
   }
 }
