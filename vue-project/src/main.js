@@ -3,6 +3,7 @@ import App from './App.vue'
 import global from './components/global/index'
 import VueCookies from 'vue-cookies'
 import { createI18n } from 'vue-i18n';
+import router from './router'
 
 
 
@@ -115,6 +116,7 @@ app.use(VueCookies)
 
 app.use(global);
 app.use(i18n);
+app.use(router)
 app.mount('#app')
 
 

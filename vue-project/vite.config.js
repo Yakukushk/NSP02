@@ -9,9 +9,12 @@ export default defineConfig({
     vue(),
     copy({
       targets: [
-        { src: 'service.html', dest: 'dist' } // Копируем файл service.html в папку dist
+        { src: 'service.html', dest: 'dist' },
+        { src: 'contact.html', dest: 'dist' },
+        { src: 'document.html', dest: 'dist' }
       ]
     })
+
   ],
   resolve: {
     alias: {
