@@ -45,9 +45,9 @@ export default {
                 </a>
 
                 <div class="header-right">
-                    <a class="nav-link" href="../../public/service.html">{{ $t('OurService')}}</a>
-                    <a class="nav-link" href="../../public/contact.html">{{ $t('Contact')}}</a>
-                    <a class="nav-link active" href="../../public/documents.html">{{ $t('Document')}}</a>
+                    <a class="nav-link" href="../../service.html">{{ $t('OurService')}}</a>
+                    <a class="nav-link" href="../../contact.html">{{ $t('Contact')}}</a>
+                    <a class="nav-link active" href="../../documents.html">{{ $t('Document')}}</a>
                     <a class="nav-link" href="#" @click="changeLanguage">{{ currentLanguage }}</a>
                 </div>
 
