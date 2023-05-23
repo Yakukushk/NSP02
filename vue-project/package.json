@@ -13,6 +13,7 @@
     "boostrap": "^2.0.0",
     "bootstrap": "^5.2.3",
     "bootstrap-vue": "^2.23.1",
+    "html-loader": "^4.2.0",
     "leaflet": "^1.9.3",
     "v-footer": "^1.0.0",
     "vue": "^3.3.2",

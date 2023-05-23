@@ -50,9 +50,9 @@ methods : {
                     {{ $t('NameofCompany')}}
                 </a>
                 <div class="header-right">
-                    <a class="nav-link active" href="../../service.html">{{ $t('OurService')}}</a>
-                    <a class="nav-link" href="../../contact.html">{{ $t('Contact')}}</a>
-                    <a class="nav-link" href="../../documents.html">{{ $t('Document')}}</a>
+                    <a class="nav-link active" href="../../public/service.html">{{ $t('OurService')}}</a>
+                    <a class="nav-link" href="../../public/contact.html">{{ $t('Contact')}}</a>
+                    <a class="nav-link" href="../../public/documents.html">{{ $t('Document')}}</a>
                     <a class="nav-link" href="#" @click="changeLanguage">{{ currentLanguage }}</a>
                 </div>
 

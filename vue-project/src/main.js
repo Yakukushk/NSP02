@@ -3,7 +3,7 @@ import App from './App.vue'
 import global from './components/global/index'
 import VueCookies from 'vue-cookies'
 import { createI18n } from 'vue-i18n';
-import router from './router'
+import { createRouter, createWebHistory } from 'vue-router';
 
 
 
@@ -11,7 +11,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/main.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-
+import Service from "@/components/Service.vue";
+import Contact from "@/components/Contact.vue";
+import Doc from  "@/components/Document.vue"
+import Hom from "@/App.vue"
 
 
 
@@ -109,6 +112,15 @@ const i18n = createI18n({
 
         }
     }
+});
+const router = createRouter({
+    history: createWebHistory(),
+    routes: [
+        { path: '/home', component: Hom, alias: '/'},
+        { path: '/service', component: Service },
+        { path: '/contact', component: Contact },
+        { path: '/document', component: Doc }
+    ]
 });
 
 app.use(VueCookies)

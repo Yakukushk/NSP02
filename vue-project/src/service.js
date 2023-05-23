@@ -1,5 +1,5 @@
 import { createApp, } from 'vue'
-import App from './Service.vue'
+import App from './components/Service.vue'
 import global from './components/global/index'
 import VueCookies from 'vue-cookies'
 import { createI18n } from 'vue-i18n';
