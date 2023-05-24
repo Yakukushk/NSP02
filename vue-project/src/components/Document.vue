@@ -121,7 +121,7 @@ export default {
                     <div class="tab-pane fade show active" id="list-doc_1" role="tabpanel" aria-labelledby="list-doc_1-list" v-for="n_doc of docs_1" >
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle1')}}</li>
-                            <li class="list-group-item"><img :src="n_doc.image" alt="" style="width: 50%; height: 50%"></li>
+                            <li class="list-group-item"><img src="./img/dd.png" alt="" style="width: 50%; height: 50%"></li>
                             <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe')}}</li>
                             <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo')}}</li>
                         </ul>
@@ -129,7 +129,7 @@ export default {
                     <div class="tab-pane fade" id="list-doc_2" role="tabpanel" aria-labelledby="list-doc_2-list" v-for="n_doc of docs_2" >
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle2')}}</li>
-                            <li class="list-group-item"><img :src="n_doc.image" alt="" style="width: 50%; height: 50%"></li>
+                            <li class="list-group-item"><img src="./img/Dovidka_priklad.jpg" alt="" style="width: 50%; height: 50%"></li>
                             <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe2')}}</li>
                             <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo2')}}</li>
                         </ul>
@@ -137,7 +137,7 @@ export default {
                     <div class="tab-pane fade" id="list-doc_3" role="tabpanel" aria-labelledby="list-doc_3-list" v-for="n_doc of docs_3">
                         <ul class="list-group list-group-flush">
 
-                            <li class="list-group-item mt-2"><img :src="n_doc.image" alt=""></li>
+                            <li class="list-group-item mt-2"><img src="./img/apostil-na-svidetelstvo-o-rozhdenii.jpg" alt=""></li>
                             <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC1')}}</strong></li>
                             <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC2')}}</strong></li>
                             <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC3')}}</strong></li>
