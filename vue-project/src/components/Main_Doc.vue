@@ -72,7 +72,7 @@ export default {
             <div class="tab-content" id="nav-tabContent" >
                 <div class="tab-pane fade show active" id="list-doc_1" role="tabpanel" aria-labelledby="list-doc_1-list" v-for="n_doc of docs_1" >
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle1')}}</li>
+                        <li class="list-group-item"><b>{{$t('NameL')}}</b> - {{$t('DocTitle1')}}</li>
                         <li class="list-group-item"><img :src="n_doc.image" alt="" style="width: 50%; height: 50%"></li>
                         <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe')}}</li>
                         <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo')}}</li>
@@ -80,7 +80,7 @@ export default {
                 </div>
                 <div class="tab-pane fade" id="list-doc_2" role="tabpanel" aria-labelledby="list-doc_2-list" v-for="n_doc of docs_2" >
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle2')}}</li>
+                        <li class="list-group-item"><b>{{$t('NameL')}}</b> - {{$t('DocTitle2')}}</li>
                         <li class="list-group-item"><img :src="n_doc.image" alt="" style="width: 50%; height: 50%"></li>
                         <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe2')}}</li>
                         <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo2')}}</li>

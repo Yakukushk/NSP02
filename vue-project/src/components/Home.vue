@@ -63,7 +63,7 @@ export default {
                     <a class="nav-link" href="/document">{{ $t('Document')}}</a>
 
 
-                    <a class="nav-link" href="#" @click="changeLanguage">{{ currentLanguage }}</a>
+                    <a class="nav-link"> <span class="badge" @click="changeLanguage">{{ currentLanguage }}</span></a>
                 </div>
 
             </nav>

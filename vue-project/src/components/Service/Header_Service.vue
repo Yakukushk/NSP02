@@ -1,7 +1,7 @@
 
 <script>
 // import {ref} from "vue";
-import image from "./img/323344.png";
+import image from "../img/323344.png";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import {ref} from "vue";
@@ -45,14 +45,14 @@ methods : {
         <div class="header">
 
             <nav class="navbar">
-                <a class="navbar-brand" href="../../index.html">
+                <a class="navbar-brand" href="../../../index.html">
                     <img :src="image" width="40" height="40" class="d-inline-block align-top mx-2 " alt="">
                     {{ $t('NameofCompany')}}
                 </a>
                 <div class="header-right">
-                    <a class="nav-link active" href="../../service.html">{{ $t('OurService')}}</a>
-                    <a class="nav-link" href="../../contact.html">{{ $t('Contact')}}</a>
-                    <a class="nav-link" href="../../documents.html">{{ $t('Document')}}</a>
+                    <a class="nav-link active" href="../../../service.html">{{ $t('OurService')}}</a>
+                    <a class="nav-link" href="../../../contact.html">{{ $t('Contact')}}</a>
+                    <a class="nav-link" href="../../../documents.html">{{ $t('Document')}}</a>
                     <a class="nav-link" href="#" @click="changeLanguage">{{ currentLanguage }}</a>
                 </div>
 
@@ -90,7 +90,7 @@ body {
 }
 
 .bg-img-2{
-    background-image: url("img/fahnen-ukraine-eu-101.jpg");
+    background-image: url("../img/fahnen-ukraine-eu-101.jpg");
     background-size: cover;
     display: block;
     position: relative;
