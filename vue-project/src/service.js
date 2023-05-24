@@ -25,7 +25,7 @@ const i18n = createI18n({
             OurService: 'Nuestros servicios',
             Contact: 'Contacto',
             Document: 'Documento',
-            LegalTranslateH1: 'Nuestros servicios',
+            LegalTranslateH1S: 'Nuestros servicios',
 
             //
              // Main
@@ -94,7 +94,7 @@ const i18n = createI18n({
             OurService: 'Наші послуги',
             Contact: 'Контакт',
             Document: 'Документи',
-            LegalTranslateH1: 'Наші Послуги',
+            LegalTranslateH1S: 'Наші Послуги',
             MainListText1: 'Ми надаєм',
             //MainListText1
             list_item_1:'Переклади документів на іспанську мову та інші (більше 30 мов)',

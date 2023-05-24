@@ -1,7 +1,7 @@
 <script>
 import Header_Doc from "@/components/Header_Doc.vue";
 
-import Footer from "@/components/Footer.vue";
+import Footer from "@/components/Service/Footer.vue";
 import Main_d0c from "@/components/Main_Doc.vue";
 export default {
     name: "Document",

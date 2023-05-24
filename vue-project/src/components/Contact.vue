@@ -1,7 +1,7 @@
 <script>
 import Header_Contact from "@/components/Header_Contact.vue";
 import Main_Contact from "@/components/Main_Contact.vue";
-import Footer from "@/components/Footer.vue";
+import Footer from "@/components/Service/Footer.vue";
 
 export default {
     name: "Contact",

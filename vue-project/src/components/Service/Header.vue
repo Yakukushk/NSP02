@@ -1,7 +1,7 @@
 
 <script>
 // import {ref} from "vue";
-import image from "./img/323344.png";
+import image from "../img/323344.png";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { ref } from 'vue';
@@ -46,15 +46,15 @@ export default {
     <div class="header">
 
       <nav class="navbar">
-         <a class="navbar-brand active" href="#">
+         <a class="navbar-brand active" href="#/home">
             <img :src="image" width="40" height="40" class="d-inline-block align-top mx-2 " alt="">
              {{ $t('NameofCompany')}}
          </a>
 
          <div class="header-right">
-           <a class="nav-link" href="../../service.html">{{ $t('OurService')}}</a>
-            <a class="nav-link" href="../../contact.html">{{ $t('Contact')}}</a>
-             <a class="nav-link" href="../../documents.html">{{ $t('Document')}}</a>
+           <a class="nav-link" href="#/service">{{ $t('OurService')}}</a>
+            <a class="nav-link" href="#/contact">{{ $t('Contact')}}</a>
+             <a class="nav-link" href="#/document">{{ $t('Document')}}</a>
 
 
              <a class="nav-link" href="#" @click="changeLanguage">{{ currentLanguage }}</a>
@@ -102,7 +102,7 @@ header{
 }
 
 .bg-img{
-    background-image: url("./img/1039539007_0_160_3073_1888_1920x0_80_0_0_ec70e2001017764bc50cb30dda34ab0d.jpg");
+    background-image: url("../img/1039539007_0_160_3073_1888_1920x0_80_0_0_ec70e2001017764bc50cb30dda34ab0d.jpg");
     background-size: cover;
     display: block;
     position: relative;

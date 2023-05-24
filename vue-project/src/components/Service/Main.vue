@@ -24,7 +24,7 @@ export default {
         <div class="row">
             <div class="card-1 col">
                 <div class="card-img">
-                    <img src="./img/dd.png" alt="" class="mt-5" style="height: 70%; width: 70%">
+                    <img src="../img/dd.png" alt="" class="mt-5" style="height: 70%; width: 70%">
                 </div>
                 <div class="card-1-txt">
                     <h6>{{ $t('TextFromImage')}}</h6>
