@@ -7,7 +7,7 @@ import Test from '@/components/Service/test.vue'
 
 
 export default createRouter({
-    mode: 'history',
+    history: createWebHistory(),
     routes : [
         { path: '/test', component: Test},
         { path: '/home', component: Home, alias: '/'},
