@@ -69,6 +69,18 @@ export default {
         },
         selectDoc : function (){
             console.log("Clicked");
+        },
+        goToDocument(){
+            this.$router.push('/document');
+        },
+        goToContact(){
+            this.$router.push('/contact');
+        },
+        goToService(){
+            this.$router.push('/service');
+        },
+        goToHome(){
+            this.$router.push('/home')
         }
     }
 
@@ -82,15 +94,15 @@ export default {
         <div class="header">
 
             <nav class="navbar">
-                <a class="navbar-brand active" href="/home">
+                <a class="navbar-brand active" @click="goToHome">
                     <img :src="image" width="40" height="40" class="d-inline-block align-top mx-2 " alt="">
                     {{ $t('NameofCompany')}}
                 </a>
 
                 <div class="header-right">
-                    <a class="nav-link" href="/service">{{ $t('OurService')}}</a>
-                    <a class="nav-link" href="/contact">{{ $t('Contact')}}</a>
-                    <a class="nav-link active" href="/document">{{ $t('Document')}}</a>
+                    <a class="nav-link" @click="goToService">{{ $t('OurService')}}</a>
+                    <a class="nav-link" @click="goToContact">{{ $t('Contact')}}</a>
+                    <a class="nav-link active" @click="goToDocument">{{ $t('Document')}}</a>
                     <a class="nav-link"> <span class="badge" @click="changeLanguage">{{ currentLanguage }}</span></a>
                 </div>
 

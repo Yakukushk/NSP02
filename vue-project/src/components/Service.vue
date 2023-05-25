@@ -31,6 +31,18 @@ export default {
             this.currentLanguage = this.currentLanguage === 'UA' ? 'ES' : 'UA';
             this.$i18n.locale = this.currentLanguage;
 
+        } ,
+        goToDocument(){
+            this.$router.push('/document');
+        },
+        goToContact(){
+            this.$router.push('/contact');
+        },
+        goToService(){
+            this.$router.push('/service');
+        },
+        goToHome(){
+            this.$router.push('/home')
         }
     }
 
@@ -47,14 +59,14 @@ export default {
         <div class="header">
 
             <nav class="navbar">
-                <a class="navbar-brand" href="/home">
+                <a class="navbar-brand" @click="goToHome">
                     <img :src="image" width="40" height="40" class="d-inline-block align-top mx-2 " alt="">
                     {{ $t('NameofCompany')}}
                 </a>
                 <div class="header-right">
-                    <a class="nav-link active" href="/service">{{ $t('OurService')}}</a>
-                    <a class="nav-link" href="/contact">{{ $t('Contact')}}</a>
-                    <a class="nav-link" href="/document">{{ $t('Document')}}</a>
+                    <a class="nav-link active" @click="goToService">{{ $t('OurService')}}</a>
+                    <a class="nav-link" @click="goToContact">{{ $t('Contact')}}</a>
+                    <a class="nav-link" @click="goToDocument">{{ $t('Document')}}</a>
                     <a class="nav-link"> <span class="badge" @click="changeLanguage">{{ currentLanguage }}</span></a>
                 </div>
 
