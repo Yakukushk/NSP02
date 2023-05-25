@@ -80,7 +80,7 @@ export default {
                     <a class="nav-link" @click="goToService">{{ $t('OurService')}}</a>
                     <a class="nav-link active" @click="goToContact">{{ $t('Contact')}}</a>
                     <a class="nav-link" @click="goToDocument">{{ $t('Document')}}</a>
-                    <a class="nav-link"> <span class="badge" @click="changeLanguage">{{ currentLanguage }}</span></a>
+                    <a class="nav-link"><span class="badge text-bg-light" @click="changeLanguage">{{ currentLanguage }}</span></a>
                 </div>
 
             </nav>
