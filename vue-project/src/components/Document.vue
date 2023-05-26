@@ -3,7 +3,7 @@ import image from "./img/323344.png";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { ref } from 'vue';
-import Footer from "@/components/Service/Footer.vue";
+import Footer from "@/components/files/Footer.vue";
 const nameofCompany = "Name Company";
 
 function Show_Image(image){
@@ -119,57 +119,56 @@ export default {
 
     </div>
     <div class="container mt-4">
-        <div class="row m-auto w-auto">
+        <div class="row">
             <div class="col-4">
-                <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-doc_1-list" data-bs-toggle="list" href="#list-doc_1" role="tab" aria-controls="list-home" @click="selectDoc">{{$t('DocTitle1')}}</a>
-                    <a class="list-group-item list-group-item-action" id="list-doc_2-list" data-bs-toggle="list" href="#list-doc_2" role="tab" aria-controls="list-profile" @click="selectDoc" >{{$t('DocTitle2')}}</a>
-                    <a class="list-group-item list-group-item-action" id="list-doc_3-list" data-bs-toggle="list" href="#list-doc_3" role="tab" aria-controls="list-messages" @click="selectDoc">{{$t('DocTitle3')}} </a>
-                    <a class="list-group-item list-group-item-action" id="list-doc_4-list" data-bs-toggle="list" href="#list-doc_4" role="tab" aria-controls="list-settings" @click="selectDoc">{{$t('DocTitle4')}}</a>
+                <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#list-item-1" @click="selectDoc">{{$t('DocTitle1')}}</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2" @click="selectDoc">{{$t('DocTitle2')}}</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-3" @click="selectDoc">{{$t('DocTitle3')}}</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4" @click="selectDoc">{{$t('DocTitle4')}}</a>
                 </div>
             </div>
             <div class="col-8">
-                <div class="tab-content" id="nav-tabContent" >
-                    <div class="tab-pane fade show active" id="list-doc_1" role="tabpanel" aria-labelledby="list-doc_1-list" v-for="n_doc of docs_1" >
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle1')}}</li>
-                            <li class="list-group-item"><img src="./img/dd.png" alt="" style="width: 50%; height: 50%"></li>
-                            <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe')}}</li>
-                            <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo')}}</li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane fade" id="list-doc_2" role="tabpanel" aria-labelledby="list-doc_2-list" v-for="n_doc of docs_2" >
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle2')}}</li>
-                            <li class="list-group-item"><img src="./img/Dovidka_priklad.jpg" alt="" style="width: 50%; height: 50%"></li>
-                            <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe2')}}</li>
-                            <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo2')}}</li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane fade" id="list-doc_3" role="tabpanel" aria-labelledby="list-doc_3-list" v-for="n_doc of docs_3">
-                        <ul class="list-group list-group-flush">
+                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                    <h4 id="list-item-1" class="mt-4"><strong>{{$t('DocTitle1')}}</strong></h4>
+                    <ul class="list-group list-group-flush">
+<!--                        <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle1')}}</li>-->
+                        <li class="list-group-item"><img src="./img/dd.png" alt="" style="width: 50%; height: 50%"></li>
+                        <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe')}}</li>
+                        <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo')}}</li>
+                    </ul>
+                    <hr style="border-color: #181818;">
+                    <h4 id="list-item-2" class="mt-4"><strong>{{$t('DocTitle2')}}</strong></h4>
+                    <ul class="list-group list-group-flush">
+<!--                        <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle2')}}</li>-->
+                        <li class="list-group-item"><img src="./img/Dovidka_priklad.jpg" alt="" style="width: 50%; height: 50%"></li>
+                        <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe2')}}</li>
+                        <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo2')}}</li>
+                    </ul>
+                    <hr style="border-color: #181818;">
+                    <h4 id="list-item-3" class="mt-4"><strong>{{$t('DocTitle3')}}</strong></h4>
+                    <ul class="list-group list-group-flush">
 
-                            <li class="list-group-item mt-2"><img src="./img/apostil-na-svidetelstvo-o-rozhdenii.jpg" alt=""></li>
-                            <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC1')}}</strong></li>
-                            <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC2')}}</strong></li>
-                            <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC3')}}</strong></li>
-                            <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC4')}}</strong></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane fade" id="list-doc_4" role="tabpanel" aria-labelledby="list-doc_4-list">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{$t('DocDescribeD1')}}</li>
-                            <li class="list-group-item">{{$t('DocDescribeD2')}}</li>
-                            <li class="list-group-item">{{$t('DocDescribeD3')}}</li>
-                            <li class="list-group-item">{{$t('DocDescribeD4')}}</li>
-                            <li class="list-group-item">{{$t('DocDescribeD5')}}</li>
-                        </ul>
-
-                    </div>
+                        <li class="list-group-item mt-2"><img src="./img/apostil-na-svidetelstvo-o-rozhdenii.jpg" alt=""></li>
+                        <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC1')}}</strong></li>
+                        <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC2')}}</strong></li>
+                        <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC3')}}</strong></li>
+                        <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC4')}}</strong></li>
+                    </ul>
+                    <hr style="border-color: #181818;">
+                    <h4 id="list-item-4" class="mt-4"><strong>{{$t('DocTitle4')}}</strong></h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{$t('DocDescribeD1')}}</li>
+                        <li class="list-group-item">{{$t('DocDescribeD2')}}</li>
+                        <li class="list-group-item">{{$t('DocDescribeD3')}}</li>
+                        <li class="list-group-item">{{$t('DocDescribeD4')}}</li>
+                        <li class="list-group-item">{{$t('DocDescribeD5')}}</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+
     <footer class="text-white text-center text-lg-start mt-4" style="background-color: #0a4275;">
         <!-- Grid container -->
         <div class="container p-4">

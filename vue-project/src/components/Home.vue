@@ -3,7 +3,7 @@ import image from "./img/323344.png";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import {createApp, ref} from 'vue';
-import Footer from "@/components/Service/Footer.vue";
+import Footer from "@/components/files/Footer.vue";
 
 
 const nameofCompany = "Name Company";
