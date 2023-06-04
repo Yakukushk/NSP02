@@ -228,167 +228,159 @@ export default {
 </template>
 
 <style >
-* {box-sizing: border-box;}
+@media screen and (max-width: 767px) {
+    * {
+        box-sizing: border-box;
+    }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-
-
-
-}
-
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
 
 
-header{
+    }
 
-}
-.dark-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.5;
-}
+    .dark-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.5;
+    }
 
-.bg-img{
-    background-image: url("./img/1039539007_0_160_3073_1888_1920x0_80_0_0_ec70e2001017764bc50cb30dda34ab0d.jpg");
-    background-size: cover;
-    display: block;
-    position: relative;
-    min-width: 70vh;
-    min-height: 70vh;
-//background-position: center center;
-    background-repeat: no-repeat;
-
-
-}
-.bg-text h1{
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 2;
-    font-size: 5vh;
-}
-.bg-text h2{
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    padding-top: 10px;
-    position: relative;
-    z-index: 2;
-}
-.bg-text h4{
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    padding-top: 30px;
-    position: relative;
-    z-index: 2;
-}
-
-
-
-
-
-.header a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-}
-
-.header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.header a:hover {
-
-}
-
-.header a.active {
-
-    color: white;
-}
-
-.header-right {
-    float: right;
-}
-
-@media screen and (max-width: 500px) {
-    .header a {
-        float: none;
+    .bg-img {
+        background-image: url("./img/1039539007_0_160_3073_1888_1920x0_80_0_0_ec70e2001017764bc50cb30dda34ab0d.jpg");
+        background-size: cover;
         display: block;
-        text-align: left;
+        position: relative;
+        min-width: 70vh;
+        min-height: 70vh;
+    //background-position: center center; background-repeat: no-repeat;
 
+
+    }
+
+    .bg-text h1 {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        position: relative;
+        z-index: 2;
+        font-size: 5vh;
+    }
+
+    .bg-text h2 {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        padding-top: 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .bg-text h4 {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        padding-top: 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+
+    .header a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+    }
+
+    .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .header a:hover {
+
+    }
+
+    .header a.active {
+
+        color: white;
     }
 
     .header-right {
-        float: none;
+        float: right;
+    }
+
+    @media screen and (max-width: 500px) {
+        .header a {
+            float: none;
+            display: block;
+            text-align: left;
+
+        }
+
+        .header-right {
+            float: none;
+        }
+    }
+    .finish-text {
+        text-align: center;
+    }
+
+    body {
+        font-family: "Calibri";
+        display: block;
+    }
+
+    .card-img {
+        padding-left: 50px;
+        box-shadow: #282828;
+    }
+
+
+
+    .card-1 h6 {
+        font-style: oblique;
+        padding-left: 40px;
+    }
+
+
+
+
+
+    .btn {
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        /*padding: 14px 28px;*/
+        font-size: 16px;
+        cursor: pointer;
+
+    }
+
+
+
+    .info:hover {
+        background: #2196F3;
+        color: white;
+    }
+
+    .list-service a {
+        text-decoration: none;
+    }
+
+    .border-right {
+        border-right: 1px solid gainsboro;
     }
 }
-.finish-text{
-    text-align: center;
-}
-body {
-    font-family: "Calibri";
-    display: block;
-}
-.card-img{
-    padding-left: 50px;
-    box-shadow: #282828;
-}
-.card-2-img{
-    text-align: center;
-    width: 100%;
-
-}
-.card-1 h6{
-    font-style: oblique;
-    padding-left: 40px;
-}
-.card-button button {
-    /*margin-left: 5;*/
-
-}
-.card-1-button{
-    text-align: left;
-    padding-left: 21vh;
-
-}
-.btn {
-    border: 2px solid black;
-    background-color: white;
-    color: black;
-    /*padding: 14px 28px;*/
-    font-size: 16px;
-    cursor: pointer;
-
-}
-.info {
-    border-color: #2196F3;
-    color: dodgerblue;
-}
-
-.info:hover {
-    background: #2196F3;
-    color: white;
-}
-.list-service a{
-    text-decoration: none;
-}
-.border-right {
-    border-right: 1px solid gainsboro;
-}
-
 
 
 </style>

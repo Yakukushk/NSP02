@@ -262,6 +262,10 @@ export default {
 
 
 <style >
+form {
+    width: 100%;
+}
+
 * {box-sizing: border-box;}
 
 body {
@@ -297,30 +301,34 @@ body {
 
 
 }
-.bg-text-2 h1{
-    text-align: center;
-    margin-top: 10px;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 2;
-    font-size: 13vh;
-}
-.bg-text h2{
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    padding-top: 10px;
-    position: relative;
-    z-index: 2;
-}
-.bg-text h4{
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    padding-top: 30px;
-    position: relative;
-    z-index: 2;
+@media screen and (max-width: 768px) {
+    .bg-text-2 h1 {
+        text-align: center;
+        margin-top: 10px;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        position: relative;
+        z-index: 2;
+        font-size: 13vh;
+    }
+
+    .bg-text h2 {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        padding-top: 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .bg-text h4 {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        padding-top: 30px;
+        position: relative;
+        z-index: 2;
+    }
 }
 
 
@@ -366,6 +374,26 @@ body {
 }
 .language{
     font-style: italic;
+}
+@media screen and (max-width: 480px) {
+    /* Применять стили для экранов шириной до 480px (мобильные устройства) */
+    .form-fields label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-fields input,
+    .form-fields textarea {
+        width: 100%;
+        padding: 5px;
+    }
+    .form-fields span {
+        display: block;
+        color: red;
+        margin-top: 5px;
+    }
+    button[type="submit"] {
+        width: 100%;
+    }
 }
 
 
