@@ -1,9 +1,10 @@
 <script>
-// import {ref} from "vue";
+
 import image from "./img/323344.png";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import {ref} from "vue";
+import { Email } from "@/assets/smtp"
 import Footer from "@/components/files/Footer.vue";
 const nameofCompany = "Name Company";
 
@@ -12,6 +13,7 @@ function Show_Image(image){
         image,
     }
 }
+
 
 export default {
     components: {Footer},
@@ -30,6 +32,12 @@ export default {
             mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.676881500795!2d30.521242712029444!3d50.46574138614433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce3f6e0df7ef%3A0xf57a41c6bf30acb0!2z0YPQuy4g0JjQu9GM0LjQvdGB0LrQsNGPLCAyMCwg0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2spl!4v1683893853478!5m2!1sru!2spl",
             phoneNumber: '',
             InvalidPhoneNumber: false,
+            fname: '',
+            fsurname: '',
+            femail: '',
+            fsubject: '',
+            fmessage: '',
+
 
         }
     },
@@ -54,6 +62,22 @@ export default {
         },
         goToHome(){
             this.$router.push('/home')
+        },
+        SendMessage(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Port: 2525,
+                Username : "example.23A@outlook.com",
+                Password : "867163176BBBD20573C08067EBA9EE61CDC7",
+                To : "example.23A@outlook.com",
+                From : 'example.23A@outlook.com',
+                Name : this.fname,
+                Subject: this.fsubject,
+                Surname: this.fsurname,
+                Body : "<strong>Name : </strong>" + this.fname + '<br/> ' +
+                    "<strong>Surname : </strong>" + this.fsurname + '<br/> ' +
+                    "<strong>Message : </strong>" + this.fmessage + '<br/> ',
+            }).then((message) => alert(message));
         }
 
     }
@@ -109,53 +133,52 @@ export default {
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="form-container">
+            <form class="form-horizontal d-flex justify-content-center" @submit.prevent="SendMessage">
+                <fieldset>
+                    <legend class="text-center">Contact us</legend>
 
-            <div class="row">
-                <div class="col">
-                    <div class="wrapper mt-4">
-                        <div class="container">
-                            <div class="card-body">
-                                <div class="txt-form">
-                                    <h1><strong>{{$t('FormTitle')}}</strong></h1>
-                                </div>
-                                <form target="_blank" action="https://formsubmit.co/example.23A@outlook.com" method="POST" >
+                    <!-- Name input-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Name</label>
 
-                                    <div class="form-fields">
-                                        <label for="name">{{$t('Name')}}</label>
-                                        <input type="text" id="name" name="name" required>
-                                    </div>
-                                    <div class="form-fields">
-                                        <label for="surname">{{$t('Surname')}}</label>
-                                        <input type="text" id="surname" name="surname" required>
-                                    </div>
-                                    <div class="form-fields">
-                                        <label for="phone">{{ $t('Phones') }}</label>
-                                        <input v-model="phoneNumber" @input="validatePhoneNumber" placeholder="">
-                                        <span v-if="invalidPhoneNumber" style="color: red;">Phone number must be 10 digits</span>
-                                    </div>
+                            <input v-model="fname" id="name" name="name" type="text" placeholder="Your name" class="form-control">
 
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="name">Surname</label>
 
-                                    <div class="form-fields">
-                                        <label for="email">{{$t('Email')}}</label>
-                                        <input type="email" id="email" name="email" required>
-                                    </div>
+                            <input v-model="fsurname" id="name" name="name" type="text" placeholder="Your surname" class="form-control">
 
-                                    <div class="form-fields">
-                                        <label for="message">{{$t('Message')}}</label>
-                                        <textarea id="message" name="message" required></textarea>
-                                    </div>
-
-                                    <button type="submit">Submit</button>
-
-                                </form>
-
-
-
-                            </div>
-                        </div>
                     </div>
 
-                </div>
+                    <!-- Email input-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="email">Your E-mail</label>
+
+                            <input v-model="femail" id="email" name="email" type="text" placeholder="Your email" class="form-control">
+
+                    </div>
+<!--                    Subject Input-->
+                    <div class="form-group">
+                        <label class="col-md-3 control label" for="subject">Your Subject</label>
+                        <input v-model="fsubject" id="subject" name="subject" type="text" placeholder="Your Subject" class="form-control">
+                    </div>
+                    <!-- Message body -->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="message">Your message</label>
+
+                            <textarea v-model="fmessage" class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+
+                    </div>
+
+                    <!-- Form actions -->
+                    <div class="form-group mt-3">
+
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
             </div>
         </div>
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
@@ -395,6 +418,7 @@ body {
         width: 100%;
     }
 }
+
 
 
 

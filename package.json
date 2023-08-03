@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "connect-history-api-fallback": "^2.0.0"
+    "connect-history-api-fallback": "^2.0.0",
+    "emailjs-com": "^3.2.0"
   },
   "scripts": {
     "build": "vue-cli-service build && node server.js"
   }
-
 }
