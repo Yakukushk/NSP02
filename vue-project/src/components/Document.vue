@@ -91,7 +91,7 @@ export default {
 <template>
     <div class="bg-img-4 bg-primary opacity-90">
         <div class="dark-overlay-2"></div>
-        <div class="header">
+        <div class="header" style="width: 100%">
 
             <nav class="navbar">
                 <a class="navbar-brand active" @click="goToHome">
@@ -132,7 +132,6 @@ export default {
                 <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
                     <h4 id="list-item-1" class="mt-4"><strong>{{$t('DocTitle1')}}</strong></h4>
                     <ul class="list-group list-group-flush">
-<!--                        <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle1')}}</li>-->
                         <li class="list-group-item"><img src="./img/dd.png" alt="" style="width: 50%; height: 50%"></li>
                         <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe')}}</li>
                         <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo')}}</li>
@@ -140,7 +139,6 @@ export default {
                     <hr style="border-color: #181818;">
                     <h4 id="list-item-2" class="mt-4"><strong>{{$t('DocTitle2')}}</strong></h4>
                     <ul class="list-group list-group-flush">
-<!--                        <li class="list-group-item"><b>{{$t('Name')}}</b> - {{$t('DocTitle2')}}</li>-->
                         <li class="list-group-item"><img src="./img/Dovidka_priklad.jpg" alt="" style="width: 50%; height: 50%"></li>
                         <li class="list-group-item"><b>{{$t('Describe')}}</b> - {{$t('DocDescribe2')}}</li>
                         <li class="list-group-item"><b>{{$t('Info')}}</b> - {{$t('DocInfo2')}}</li>
@@ -149,7 +147,7 @@ export default {
                     <h4 id="list-item-3" class="mt-4"><strong>{{$t('DocTitle3')}}</strong></h4>
                     <ul class="list-group list-group-flush">
 
-                        <li class="list-group-item mt-2"><img src="./img/apostil-na-svidetelstvo-o-rozhdenii.jpg" alt=""></li>
+                        <li class="list-group-item mt-2"><img src="https://nta-ukraine.com.ua/files/images/apostil_na_svidetelstvo_v_ukraine_1.jpg" alt=""></li>
                         <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC1')}}</strong></li>
                         <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC2')}}</strong></li>
                         <li class="list-group-item mt-4"><strong>{{$t('DocDescribeC3')}}</strong></li>
@@ -296,7 +294,9 @@ body {
     z-index: 2;
 }
 
-
+.header {
+    width: 100%;
+}
 
 .header a {
     float: left;

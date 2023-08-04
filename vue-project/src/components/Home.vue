@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import {createApp, ref} from 'vue';
 import Footer from "@/components/files/Footer.vue";
+import MobileVersion from "@/components/MobileVersion.vue";
+import {useRouter} from "vue-router";
 
 
 const nameofCompany = "Name Company";
@@ -17,12 +19,18 @@ function Show_Image(image){
 
 
 export default {
-    components: {Footer},
+    components: {Footer, MobileVersion},
+    mounted() {
+        // Add an event listener to check the screen width when the component is mounted
+        window.addEventListener("resize", this.redirectToMobileVersion);
+        // Redirect immediately if the user lands on a mobile device
+        this.redirectToMobileVersion();
+    },
 
     data: function () {
         return {
             image: image,
-
+            router: useRouter(),
             selectIndexImage: 0,
             nameofCompany: nameofCompany,
             currentLanguage: ref('UA'),
@@ -40,20 +48,27 @@ export default {
             this.$i18n.locale = this.currentLanguage;
 
         },
-        goToDocument(){
+        goToDocument() {
             this.$router.push('/document');
         },
-        goToContact(){
+        goToContact() {
             this.$router.push('/contact');
         },
-        goToService(){
+        goToService() {
             this.$router.push('/service');
         },
-        goToHome(){
+        goToHome() {
             this.$router.push('/home')
-        }
-    }
+        },
+        redirectToMobileVersion() {
+            console.log("Redirect method called");
+            if (window.innerWidth < 768) {
+                this.$router.push("/mobile");
+            }
 
+        },
+
+    }
 }
 </script>
 
@@ -162,7 +177,8 @@ export default {
 
 
     </main>
-    <footer class="text-white text-center text-lg-start mt-4" style="background-color: #0a4275;">
+<!--    <MobileVersion/>-->
+    <footer class="text-white text-center text-lg-start mt-4 footer" style="background-color: #0a4275; width: 100%">
         <!-- Grid container -->
         <div class="container p-4">
             <!--Grid row-->
@@ -236,8 +252,16 @@ export default {
     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
 
 
+    }
+    .container {
+        max-width: 100%; /* Максимальная ширина контейнера */
+    }
+
+    .card-1 {
+        max-width: 300px; /* Максимальная ширина для карточек */
     }
 
     .dark-overlay {
@@ -257,7 +281,7 @@ export default {
         position: relative;
         min-width: 70vh;
         min-height: 70vh;
-    //background-position: center center; background-repeat: no-repeat;
+
 
 
     }
@@ -288,7 +312,15 @@ export default {
         position: relative;
         z-index: 2;
     }
+    @media screen and (max-width: 767px) {
+        .navbar {
+            width: 100%;
+        }
 
+        .footer {
+            width: 100%;
+        }
+    }
 
     .header a {
         float: left;

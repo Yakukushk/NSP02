@@ -92,7 +92,7 @@ export default {
   <!-- Image and text -->
     <div class="bg-img-3 bg-primary opacity-90">
         <div class="dark-overlay-2"></div>
-        <div class="header">
+        <div class="header" style="width: 100%">
 
             <nav class="navbar">
                 <a class="navbar-brand" @click="goToHome">
@@ -173,10 +173,11 @@ export default {
                     </div>
 
                     <!-- Form actions -->
-                    <div class="form-group mt-3">
-
-                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    <div class="form-group mt-3 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                     </div>
+
+
                 </fieldset>
             </form>
             </div>
@@ -355,7 +356,9 @@ body {
 }
 
 
-
+.header{
+    width: 100%;
+}
 .header a {
     float: left;
     color: white;
@@ -384,6 +387,7 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+
     .header a {
         float: none;
         display: block;
