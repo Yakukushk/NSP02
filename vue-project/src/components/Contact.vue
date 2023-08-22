@@ -68,7 +68,7 @@ export default {
                 Host : "smtp.elasticemail.com",
                 Port: 2525,
                 Username : "example.23A@outlook.com",
-                Password : "867163176BBBD20573C08067EBA9EE61CDC7",
+                Password : "yourpassword",
                 To : "example.23A@outlook.com",
                 From : 'example.23A@outlook.com',
                 Name : this.fname,
